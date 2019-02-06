@@ -4,6 +4,12 @@ import ReactDOM from 'react-dom';
 const title = 'Mike Janes app';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      
+    }
+  }
   render() {
     return (
       <div>{title}</div>
