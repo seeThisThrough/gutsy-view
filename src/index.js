@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import RenderPicture from './components/picView.js';
 import TitleView from './components/titleView.js'
-import DescriptionView from './components/DescriptionView.js'
 
 
 class App extends React.Component {
@@ -19,23 +18,34 @@ class App extends React.Component {
       <div style={picTitleView}>
         <RenderPicture/> <TitleView/>
       </div>
-
-        
+      <button id="book" style={button}>Book Now</button>
       </div>
+    )
+  }
+}
+  const picTitleView = {
+    display: 'flex',
+    flexDirection: 'row'
+  }
+  const mainView = {
+    margin: '10px',
+    border: '2.5px solid black',
+    borderHeight: '5px',
+    padding: '20px',
+  }
+  const button = {
+    margin: '10px',
+    backgroundColor: 'black',
+    borderColor: 'white',
+    borderRadius: '5px',
+    color: 'white',
+    fontSize: 24,
+    fontWeight: 'bold',
+    overflow: 'hidden',
+    padding: 5,
+    width: '400px'
 
-)
-}
-}
-    const picTitleView = {
-        display: 'flex',
-        flexDirection: 'row'
-    }
-      const mainView = {
-        margin: '10px',
-        border: '2.5px solid black',
-        borderHeight: '5px',
-        padding: '20px',
-    }
+  }
 
 ReactDOM.render(<App/>, document.getElementById('app'));
 
