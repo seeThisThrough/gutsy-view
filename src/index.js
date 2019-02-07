@@ -1,22 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import RenderPicture from './components/picView.js';
+import TitleView from './components/titleView.js'
+import DescriptionView from './components/DescriptionView.js'
 
-const title = 'Mike Janes app';
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      
+      id: 0
     }
   }
+  
   render() {
     return (
-      <div>{title}</div>
-    )
-  }
+      <div className='main' style={mainView}>
+      <div style={picTitleView}>
+        <RenderPicture/> <TitleView/>
+      </div>
+
+        
+      </div>
+
+)
 }
+}
+    const picTitleView = {
+        display: 'flex',
+        flexDirection: 'row'
+    }
+      const mainView = {
+        margin: '10px',
+        border: '2.5px solid black',
+        borderHeight: '5px',
+        padding: '20px',
+    }
 
 ReactDOM.render(<App/>, document.getElementById('app'));
 
-module.hot.accept();
+export default App
