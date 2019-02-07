@@ -15,27 +15,35 @@ class App extends React.Component {
   render() {
     return (
       <div className='main' style={mainView}>
-      <div style={picTitleView}>
-        <RenderPicture/> <TitleView/>
-      </div>
-      <button id="book" style={button}>Book Now</button>
+        <div style={midView}>
+          <div style={picTitleView}>
+            <RenderPicture/> <TitleView/>
+          </div>
+          <button id="book" style={button}>Book Now</button>
+        </div>
       </div>
     )
   }
+}
+
+const midView = {
+  margin: 'auto',
 }
   const picTitleView = {
     display: 'flex',
     flexDirection: 'row'
   }
   const mainView = {
-    margin: '10px',
+    // margin: 'auto',
+    // width: '75%',
     border: '2.5px solid black',
     borderHeight: '5px',
     padding: '20px',
+    align: 'center'
   }
   const button = {
     margin: '10px',
-    backgroundColor: 'black',
+    backgroundColor: '#2d2a26',
     borderColor: 'white',
     borderRadius: '5px',
     color: 'white',
@@ -43,7 +51,9 @@ class App extends React.Component {
     fontWeight: 'bold',
     overflow: 'hidden',
     padding: 5,
-    width: '400px'
+    width: '400px',
+    outline: 'none',
+    cursor: 'pointer'
 
   }
 

@@ -1,10 +1,22 @@
 import React from 'react'
 
-const TitleView = () => {
+const TitleView = (props) => {
   return (
-    <div style={titleView}>
-      <p>this is the title view</p>
-      <p>Description goes here</p>
+    <div>
+      <div style={titleView}>
+        <h4>Title:</h4>
+        <br/>
+        <br/>
+        <br/>
+        <h4>Description:</h4>
+      </div>
+      <div style={{marginLeft: '5px'}}>
+        <ul>
+          <li>Tickets sent via email</li>
+          <li>Returns and exchanges accepted</li>
+          <li>Exceptions may apply.</li>
+        </ul>
+      </div>
     </div>
   )
 }
